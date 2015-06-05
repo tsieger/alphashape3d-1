@@ -23,7 +23,7 @@ surfaceNormals<-function(x,indexAlpha = 1,display = FALSE, col=3, scale = 1, ...
 		
 		# Singular and regular triangles
 		# ====================================================
-		tr<-triangles[triangles[,8+iAlpha]==2,c("tr1","tr2","tr3")]
+		tr<-triangles[triangles[,8+iAlpha]>=2,c("tr1","tr2","tr3")]
 		te<-tetra[tetra[,5+iAlpha]==1,1:4]
 		normMat<-numeric(length(tr))
 		middlePoint<-numeric(length(tr))
